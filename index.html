@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Антон & Анастасия - Свадьба</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Рукописные шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Hero секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="subtitle animate-fade-in-up">Wedding day</h1>
+            <h2 class="title animate-fade-in-up-delay">АНТОН & <br> АНАСТАСИЯ</h2>
+            
+            <!-- ПЛЕЕР ДОБАВЛЯЕМ ЗДЕСЬ - ПОСЛЕ ЗАГОЛОВКОВ, ПЕРЕД ФОТО -->
+            <div class="music-player-container">
+                <div class="music-player">
+                    <div class="circle-player">
+
+                        <svg class="circle-text" viewBox="0 0 200 200" width="200" height="200">
+                            <defs>
+                                <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/>
+                            </defs>
+                            <text fill="#450619" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="300">
+                                <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle">
+                                    • включите музыку • включите музыку • включите музыку 
+                                </textPath>
+                            </text>
+                        </svg>
+                        
+
+                        <button class="play-button" id="playButton">
+                            <svg class="play-icon" viewBox="0 0 100 100">
+                                <polygon class="play-triangle" points="30,25 30,75 70,50" fill="#f0e9df"/>
+                                <rect class="pause-bar pause-left" x="30" y="25" width="15" height="50" fill="#f0e9df" opacity="0"/>
+                                <rect class="pause-bar pause-right" x="55" y="25" width="15" height="50" fill="#f0e9df" opacity="0"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <audio id="weddingMusic" loop>
+                        <source src="1.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <img src="1111.jpg" alt="Иван и Юлия" class="hero-photo">
+    </section>
+
+
+    <!-- <section class="lifetime-promise">
+        <div class="promise-container">
+            <div class="promise-icon" aria-hidden="true">
+                <span class="ring-left">⚭</span>
+                <span class="heart">♥</span>
+                <span class="ring-right">⚭</span>
+            </div>
+            <h2 class="promise-title">ОБЕЩАНИЕ НА ВСЮ ЖИЗНЬ</h2>
+            <p class="promise-lead">Два сердца, бьющиеся в унисон. Два кольца, замкнувших круг вечности.<br>
+            В этом простом жесте — вся глубина обещания, которое мы даем друг другу. Не золото делает кольцо ценным,<br>
+            а история, которую оно заключает в себе.</p>
+            
+            <blockquote class="promise-quote">
+                «Любовь измеряется не годами, а моментами,<br>
+                которые остаются с нами навсегда»
+            </blockquote>
+            
+            <p class="promise-text">
+                Наш союз — это не просто формальность. Это сознательный выбор каждый день просыпаться рядом,<br>
+                делить радости и преодолевать трудности вместе. Кольца на наших пальцах — лишь видимое свидетельство невидимой связи.
+            </p>
+        </div>
+    </section> -->
+
+    <!-- Секция с локацией (БОРДОВЫЙ ФОН) -->
+    <section class="location-section">
+        <div class="location-container">
+            <!-- Текст приглашения и дата -->
+            <div class="invitation-text">
+                <p class="invitation">Приглашаем Вас разделить с нами первый праздник нашей семьи – нашу свадьбу!</p>
+                <div class="date">11 НОЯБРЯ 2026</div>
+                
+                <!-- Простой недельный календарь -->
+                <!-- Вместо <img src="4.png" alt="Дата свадьбы 8 июня 2026" class="date-photo"> вставляем этот код -->
+
+<!-- Простой календарь с выделенной датой свадьбы (ПРОЗРАЧНЫЙ ФОН) -->
+<div class="simple-calendar">
+    <!-- Дни недели -->
+    <div class="calendar-row days-of-week">
+        <div class="calendar-day">ПН</div>
+        <div class="calendar-day">ВТ</div>
+        <div class="calendar-day">СР</div>
+        <div class="calendar-day">ЧТ</div>
+        <div class="calendar-day">ПТ</div>
+        <div class="calendar-day">СБ</div>
+        <div class="calendar-day">ВС</div>
+    </div>
+    <!-- Первая неделя (18.05 - 24.05) -->
+    <div class="calendar-row">
+        <div class="calendar-date">9</div>
+        <div class="calendar-date">10</div>
+        <div class="calendar-date wedding-date">11</div>
+        <!-- Выделенная дата свадьбы (21 мая) -->
+        <div class="calendar-date">12</div>
+        <div class="calendar-date">13</div>
+        <div class="calendar-date">14</div>
+        <div class="calendar-date">15</div>
+    </div>
+    <!-- Вторая неделя (25.05 - 31.05) -->
+    <!-- <div class="calendar-row">
+        <div class="calendar-date">25</div>
+        <div class="calendar-date">26</div>
+        <div class="calendar-date">27</div>
+        <div class="calendar-date">28</div>
+        <div class="calendar-date">29</div>
+        <div class="calendar-date">30</div>
+        <div class="calendar-date">31</div>
+    </div> -->
+</div>
+
+<!-- Стили для календаря (ПОЛНОСТЬЮ ПРОЗРАЧНЫЙ ФОН) -->
+<style>
+    /* Контейнер календаря — теперь без фона и границ */
+    .simple-calendar {
+        max-width: 600px;
+        margin-left: auto;  /* Выравнивание справа */
+        margin-bottom: 40px;
+        /* Убираем весь фон и границы */
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0;  /* Убираем внутренние отступы */
+    }
+
+    /* Строка календаря */
+    .calendar-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px; /* Немного уменьшил отступ */
+    }
+    .calendar-row:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Ячейка дня недели — прозрачная */
+    .days-of-week .calendar-day {
+        font-weight: 400;
+        color: #f0e9df; /* Светлый текст */
+        opacity: 0.9;
+    }
+    .calendar-day {
+        flex: 1;
+        text-align: center;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+        color: #f0e9df; /* Светлый текст */
+        padding: 5px; /* Уменьшил padding */
+        /* Убираем фон */
+        background-color: transparent !important;
+    }
+
+    /* Ячейка с числом — полностью прозрачная, только текст */
+    .calendar-date {
+        flex: 1;
+        text-align: center;
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #f0e9df; /* Светлый текст */
+        padding: 10px 5px;
+        margin: 0 5px;
+        /* Полностью прозрачный фон */
+        background-color: transparent !important;
+        border-radius: 0; /* Убираем скругление */
+        transition: all 0.3s ease;
+    }
+
+    /* Выделенная дата свадьбы — только обводка/фон для самой даты */
+    .calendar-date.wedding-date {
+        background-color: #f0e9df !important; /* Светлый фон только для этой ячейки */
+        color: #5c151b !important; /* Бордовый текст */
+        border-radius: 50%; /* Делаем круглую форму */
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto; /* Центрируем круг */
+        font-size: 1.8rem;
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+        /* Убираем лишние отступы, чтобы круг был ровным */
+        padding: 0;
+        line-height: 1;
+    }
+    
+    /* Сердечко под круглой датой */
+    /* .calendar-date.wedding-date::after {
+        content: '♥';
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        color: #f0e9df;
+        white-space: nowrap;
+    } */
+
+    /* Адаптивность для мобильных */
+    @media (max-width: 768px) {
+        .simple-calendar {
+            margin: 0 auto 30px auto; /* Центрируем на мобильных */
+        }
+        
+        .calendar-day {
+            font-size: 1rem;
+            padding: 5px 2px;
+        }
+        
+        .calendar-date {
+            font-size: 1.5rem;
+            padding: 8px 2px;
+            margin: 0 2px;
+        }
+        
+        /* Круглая дата на мобильных */
+        .calendar-date.wedding-date {
+            width: 45px;
+            height: 45px;
+            font-size: 1.5rem;
+        }
+        
+        /* .calendar-date.wedding-date::after {
+            font-size: 1.2rem;
+            bottom: -22px;
+        } */
+    }
+
+    @media (max-width: 480px) {
+        .calendar-day {
+            font-size: 0.9rem;
+            padding: 5px 1px;
+        }
+        
+        .calendar-date {
+            font-size: 1.3rem;
+            padding: 6px 1px;
+            margin: 0 1px;
+        }
+        
+        .calendar-date.wedding-date {
+            width: 40px;
+            height: 40px;
+            font-size: 1.3rem;
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .calendar-day {
+            font-size: 0.8rem;
+        }
+        
+        .calendar-date {
+            font-size: 1.1rem;
+        }
+        
+        .calendar-date.wedding-date {
+            width: 35px;
+            height: 35px;
+            font-size: 1.1rem;
+        }
+    }
+</style>
+            </div>
+            
+            <!-- Блок LOCATION с СВЕТЛЫМ фоном - ПЕРЕМЕЩАЕМ ЗДЕСЬ -->
+            <div class="location-info-light">
+                <div class="location-info-content">
+                    <h3 class="location-title">LOCATION</h3>
+                    
+                    <!-- Фото места проведения ВНУТРИ блока location-info-light ПОСЛЕ заголовка -->
+                    <div class="location-photo-container">
+                        <img src="loc2.png" alt="Место проведения свадьбы" class="location-photo">
+                    </div>
+                    
+                    <!-- Адрес и кнопка ПОСЛЕ фото -->
+                    <p class="location-address"> с. Памятное, Памятнинское поселение, 45 (мини-отель Борвиха) </p>
+                    <a href="https://yandex.ru/maps/-/CHHzjS2X" class="map-button" target="_blank">Посмотреть на карте </a>
+<br> <br><br>
+                    <p class="location-address"> ЗАГС -  г. Ялуторовск, ул. Тобольская, 33</p>
+                    <a href="https://yandex.ru/maps/-/CHHzjS2X" class="map-button" target="_blank">Посмотреть на карте</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "WEDDING PROGRAM" (БОРДОВЫЙ ФОН) -->
+    <section class="section program-section" id="program">
+    <div class="container">
+        <div class="section-header">
+        <h2 class="section-title">Программа дня</h2>
+        </div>
+        
+        <div class="program">
+        <!-- <div class="program-item">
+            <div class="program-image">
+            <img src="11.png" alt="Сбор гостей" class="program-icon">
+            </div>
+            <div class="program-content">
+            <h3 class="program-title">СБОР ГОСТЕЙ</h3>
+            <div class="program-time">17:00</div>
+            </div>
+        </div> -->
+        
+        <div class="program-item">
+            <div class="program-image">
+            <img src="12.png" alt="Церемония" class="program-icon">
+            </div>
+            <div class="program-content">
+            <h3 class="program-title">ЗАГС</h3>
+            <div class="program-time">15:30</div>
+            </div>
+        </div>
+        
+        <div class="program-item">
+            <div class="program-image">
+            <img src="13.png" alt="Ужин" class="program-icon">
+            </div>
+            <div class="program-content">
+            <h3 class="program-title">НАЧАЛО БАНКЕТА</h3>
+            <div class="program-time">18:00</div>
+            </div>
+        </div>
+        
+        <!-- <div class="program-item">
+            <div class="program-image">
+            <img src="14.png" alt="Торт" class="program-icon">
+            </div>
+            <div class="program-content">
+            <h3 class="program-title">СВАДЕБНЫЙ ТОРТ</h3>
+            <div class="program-time">20:30</div>
+            </div>
+        </div>
+        
+        <div class="program-item">
+            <div class="program-image">
+            <img src="15.png" alt="Танцы" class="program-icon">
+            </div>
+            <div class="program-content">
+            <h3 class="program-title">ЗАЖИГАТЕЛЬНЫЙ DJ-СЕТ</h3>
+            <div class="program-time">22:00</div>
+            </div>
+        </div> -->
+        
+        <div class="program-item">
+            <div class="program-image">
+            <img src="16.png" alt="Окончание" class="program-icon">
+            </div>
+            <div class="program-content">
+            <h3 class="program-title">ОКОНЧАНИЕ ВЕЧЕРА</h3>
+            <div class="program-time">00:00</div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Секция "WISHES" (БОРДОВЫЙ ФОН) -->
+    <section class="wishes-section">
+        <div class="wishes-container">
+            <h2 class="wishes-title">WISHES</h2>
+            
+            <div class="wishes-content">
+                <p class="wishes-text">
+                    Если хотите подарить нам ценный и нужный подарок, мы будем очень благодарны за вклад в бюджет нашей семьи. <br><br>
+                    Также обращаем внимаение, что традиционное "Горько" будет в не традиционном формате, а именно: <br> один выкрик "Горько" стоит 5 000 руб.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "DRESS CODE" (СВЕТЛЫЙ ФОН) -->
+<!-- Секция "DRESS CODE" (СВЕТЛЫЙ ФОН) -->
+<section class="dresscode-section">
+    <div class="dresscode-container">
+        <h2 class="dresscode-title">
+            <span>DRESS</span>
+            <span>CODE</span>
+        </h2>
+        
+        <div class="dresscode-content">
+            <p class="dresscode-text">Для нас главное-Ваше присутствие! Но Мы будем рады, если вы поддержите палитру нашего праздника в красных и бордовых оттенках</p>
+            
+            <!-- КРУЖОЧКИ С ЦВЕТАМИ -->
+            <div class="color-palette">
+                <div class="color-circle" style="background-color: #5c151b;"></div>
+                <div class="color-circle" style="background-color: #800020;"></div>
+                <div class="color-circle" style="background-color: #8B0000;"></div>              
+                <div class="color-circle" style="background-color: #A52A2A;"></div>
+            </div>
+            <!-- КОНЕЦ КРУЖОЧКОВ -->
+        </div>
+    </div>
+</section>
+
+    <!-- Таймер отсчета до свадьбы -->
+    <section class="countdown-section">
+        <div class="countdown-container">
+            <h2 class="countdown-title">ДО СВАДЬБЫ ОСТАЛОСЬ</h2>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">ДНЕЙ</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">ЧАСОВ</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">МИНУТ</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">СЕКУНД</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Секция "RSVP" (СВЕТЛЫЙ ФОН) -->
+    <section class="rsvp-section">
+        <div class="rsvp-container">
+            <h2 class="rsvp-title">АНКЕТА</h2>
+            
+            <div class="rsvp-content">
+                <p class="rsvp-text">
+                    Просим подтвердить свое присутствие на торжестве<br>
+                    Мы будем ждать от вас ответ до 26 октября 2026 года.
+                </p>
+                
+                <form class="rsvp-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Фамилия Имя Отчество" required>
+                    </div>
+                    
+                    <!-- <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Номер телефона" required>
+                    </div> -->
+                    
+                    <div class="form-group">
+                        <select class="form-input form-select">
+                            <option value="" disabled selected>Количество гостей</option>
+                            <option value="1">1 (только я)</option>
+                            <option value="2">2 (я + партнёр)</option>
+                            <option value="3">3 (я + 2 гостя)</option>
+                            <option value="4">4 (я + 3 гостя)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="yes" required>
+                                <span class="radio-custom"></span>
+                                <span class="radio-text">С радостью приду!</span>
+                            </label>
+                            
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="no">
+                                <span class="radio-custom"></span>
+                                <span class="radio-text">К сожалению, не смогу</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- Алкоголь -->
+                    <div class="form-group">
+                        <select class="form-input form-select" id="alcoholSelect" required>
+                            <option value="" disabled selected>Предпочтения по алкоголю</option>
+                            <option value="алкоголь1">Красное вино</option>
+                            <option value="алкоголь2">Белое вино</option>
+                            <option value="алкоголь3">Шампанское</option>
+                            <option value="алкоголь4">Водка</option>
+                            <option value="алкоголь5">Виски</option>
+                            <option value="безалкогольное6">Коньяк</option>
+                            <option value="не употребляю7">Безалкогольные напитки</option>
+                        </select>
+                    </div>
+
+                    <!-- Вкусовые предпочтения -->
+                    <div class="form-group">
+                        <select class="form-input form-select" id="foodSelect" required>
+                            <option value="" disabled selected>Вкусовые предпочтения</option>
+                            <option value="мясо">Мясо</option>
+                            <option value="рыба">Рыба</option>
+                            <option value="вегетарианец">Вегетарианец</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Подтвердить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция VK CHAT -->
+<section class="vk-chat-section">
+    <div class="vk-chat-container">
+        <h2 class="vk-chat-title">ЧАТ ГОСТЕЙ</h2>
+        <p class="vk-chat-text">
+            Присоединяйтесь к нашему чату в VK, чтобы быть в курсе всех новостей и общаться с другими гостями!
+        </p>
+        <a href="https://vk.me/join/iU/y4YljxPeeNpQi96Bcwc2toSGkNnDuMak=" class="vk-button" target="_blank">
+            <svg class="vk-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619 0 0-1.115 2.719-2.695 4.482-.51.51-.743.673-1.021.673-.139 0-.34-.163-.34-.628V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.406.836-.743 0-2.551-2.729-3.624-5.853-.209-.607-.42-.85-.98-.85H2.752c-.626 0-.752.295-.752.619 0 .582.743 3.462 3.461 7.271 1.812 2.601 4.363 4.011 6.687 4.011 1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.751.577-.751.327 0 .89.163 2.203 1.418 1.5 1.5 1.746 2.176 2.59 2.176h2.193c.626 0 .94-.313.759-.932-.197-.615-.907-1.508-1.847-2.568-.51-.596-1.275-1.238-1.507-1.558-.325-.389-.232-.561 0-.907 0 0 2.665-3.755 2.943-5.028z"/>
+            </svg>
+            Присоединиться к чату VK
+        </a>
+    </div>
+</section>
+
+    <!-- Футер -->
+<!-- Футер -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <!-- Фото 2.jpg -->
+        <div class="footer-photo-container">
+            <img src="2.jpg" alt="Иван и Юлия" class="footer-photo">
+        </div>
+        
+        <p class="footer-text">
+            Если у вас появятся вопросы по мероприятию, обращайтесь к ведущему:<br>
+            <span class="footer-contact">+7 912 575-20-30</span><br>
+        </p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

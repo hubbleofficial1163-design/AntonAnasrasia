@@ -1,0 +1,1622 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Шрифты Old Money стиль */
+body {
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #333;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+/* Hero секция - СВЕТЛЫЙ ФОН */
+.hero {
+    height: 100vh;
+    height: 100svh;
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #f0e9df;
+    color: #5c151b;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 20svh;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+/* Фото в hero */
+.hero-photo {
+    position: absolute;
+    width: 450px;
+    height: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 40px 40px 0 0;
+    max-width: 90%;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Стили для верхнего текста */
+.subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+    color: #5c151b;
+    font-style: italic;
+}
+
+/* Стили для основного текста */
+.title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.2;
+    color: #5c151b;
+    text-transform: uppercase;
+}
+
+/* Секция с локацией - БОРДОВЫЙ ФОН */
+.location-section {
+    padding: 60px 0 0 0;
+    background-color: #5c151b !important;
+}
+
+.location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Текст приглашения и дата */
+.invitation-text {
+    margin-bottom: 50px;
+    text-align: right;
+    padding: 0 20px;
+}
+
+.invitation {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #f0e9df;
+    max-width: 800px;
+    margin-left: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.02rem;
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #f0e9df;
+    letter-spacing: 0.15rem;
+    margin-bottom: 40px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+/* Простой календарь */
+.simple-calendar {
+    max-width: 600px;
+    margin-left: auto;
+    margin-bottom: 40px;
+    background-color: rgba(240, 233, 223, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(240, 233, 223, 0.2);
+}
+
+.calendar-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.calendar-row:last-child {
+    margin-bottom: 0;
+}
+
+.calendar-day {
+    flex: 1;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #f0e9df;
+    padding: 10px 5px;
+}
+
+.calendar-day.wedding {
+    color: #f0e9df;
+    font-weight: 500;
+}
+
+.calendar-date {
+    flex: 1;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #f0e9df;
+    padding: 15px 5px;
+    background-color: rgba(240, 233, 223, 0.1);
+    margin: 0 5px;
+    border-radius: 8px;
+}
+
+.calendar-date.wedding-date {
+    background-color: #f0e9df;
+    color: #5c151b;
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Фото места проведения */
+.location-photo-container {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.location-photo {
+    width: 110%;
+    height: 440px;
+    object-fit: contain;
+    display: block;
+    margin-left: -5%;
+}
+
+/* Блок LOCATION с БОРДОВЫМ фоном */
+.location-info-light {
+    background-color: #5c151b !important;
+    padding: 60px 0;
+    width: 100%;
+    color: #f0e9df;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+}
+
+.location-info-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.location-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #f0e9df;
+    text-align: center;
+}
+
+.location-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #f0e9df;
+    text-align: center;
+}
+
+/* Кнопка карты */
+.map-button {
+    display: inline-block;
+    background-color: #f0e9df;
+    color: #5c151b;
+    padding: 16px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    border: 2px solid #f0e9df;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.map-button:hover {
+    background-color: #5c151b;
+    color: #f0e9df;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(69, 6, 25, 0.3);
+}
+
+/* Секция WEDDING PROGRAM - СВЕТЛЫЙ ФОН */
+.program-section {
+    padding: 80px 20px;
+    background-color: #f0e9df !important;
+    color: #5c151b;
+}
+
+.program-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Заголовок Программа дня - СЛЕВА */
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #5c151b;
+    text-align: left;
+    line-height: 1;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+/* Таймлайн программы */
+.program-timeline {
+    max-width: 600px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    color: #5c151b;
+}
+
+.timeline-dash {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: #5c151b;
+    line-height: 1.2;
+    min-width: 20px;
+}
+
+.timeline-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    min-width: 70px;
+    color: #5c151b;
+    margin-right: 15px;
+    line-height: 1.5;
+}
+
+.timeline-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* Секция DRESS CODE - БОРДОВЫЙ ФОН */
+.dresscode-section {
+    padding: 80px 20px;
+    background-color: #f0e9df !important;
+    color: #5c151b;
+}
+
+.dresscode-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding:0 20px;
+}
+
+/* Заголовок СПРАВА */
+.dresscode-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #5c151b;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 60px;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+/* Контент секции DRESS CODE */
+.dresscode-content {
+    max-width: 800px;
+    margin-left: 0 auto;
+    padding-right: 0;
+    text-align: center;
+}
+
+.dresscode-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    color: #5c151b;
+    text-align: center;
+}
+
+/* Контейнер для палитры */
+.palette-container {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.palette-image {
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Секция WISHES - СВЕТЛЫЙ ФОН */
+.wishes-section {
+    padding: 80px 20px;
+    background-color: #5c151b !important;
+    color: #f0e9df;
+}
+
+.wishes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Заголовок слева */
+.wishes-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #f0e9df;
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 60px;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.wishes-content {
+    max-width: 800px;
+    margin-left: 0;
+    padding-right: 0;
+}
+
+.wishes-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #f0e9df;
+    text-align: center;
+}
+
+/* Таймер отсчета - БОРДОВЫЙ ФОН */
+.countdown-section {
+    padding: 60px 20px;
+    background-color: #5c151b !important;
+}
+
+.countdown-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.countdown-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #f0e9df;
+    margin-bottom: 40px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.countdown-number {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #f0e9df;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(240, 233, 223, 0.2);
+}
+
+.countdown-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #f0e9df;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.countdown-separator {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #f0e9df;
+    margin: 0 5px;
+}
+
+/* Секция RSVP - СВЕТЛЫЙ ФОН */
+.rsvp-section {
+    padding: 80px 20px;
+    background-color: #f0e9df !important;
+    color: #5c151b;
+}
+
+.rsvp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Заголовок по центру */
+.rsvp-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #5c151b;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 60px;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.rsvp-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.rsvp-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    color: #5c151b;
+    text-align: center;
+}
+
+/* Форма */
+.rsvp-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #8B7355;
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-input:focus {
+    border-color: #5c151b;
+    box-shadow: 0 0 0 3px rgba(69, 6, 25, 0.1);
+}
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23450619' d='M6 9L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 12px;
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+/* Радио кнопки */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #5c151b;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #8B7355;
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+    background-color: #5c151b;
+    border-color: #5c151b;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #f0e9df;
+    border-radius: 50%;
+}
+
+.radio-text {
+    line-height: 1.4;
+}
+
+/* Кнопка отправки */
+.submit-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #5c151b;
+    padding: 16px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    border: 1px solid #8B7355;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #5c151b;
+    color: #f0e9df;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+}
+
+/* Футер - БОРДОВЫЙ ФОН */
+.footer-section {
+    padding: 60px 20px;
+    background-color: #5c151b;
+    color: #f0e9df;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #f0e9df;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-contact {
+    font-weight: 400;
+    color: #f0e9df;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-up-delay {
+    animation: fadeInUp 1.2s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+body {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Стили для программы */
+.program {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.program-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.program-image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+}
+
+.program-icon {
+    width: 80px;
+    height: 80px;
+    object-position: center center;
+    display: block;
+}
+
+.program-content {
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+.program-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.program-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: #8B7355;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* ПЛЕЕР МЕЖДУ ЗАГОЛОВКАМИ И ФОТО */
+.music-player-container {
+    position: relative;
+    z-index: 3;
+    margin: 100px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Контейнер для кругового плеера */
+.circle-player {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* SVG с круговым текстом */
+.circle-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotateText 25s linear infinite;
+}
+
+.circle-text text {
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+/* Кнопка воспроизведения */
+.play-button {
+    width: 70px;
+    height: 70px;
+    background-color: #5c151b;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(69, 6, 25, 0.3);
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.play-button:hover {
+    background-color: #5c082c;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(69, 6, 25, 0.4);
+}
+
+.play-button:active {
+    transform: scale(0.95);
+}
+
+.play-icon {
+    width: 28px;
+    height: 28px;
+    fill: #f0e9df;
+    margin-left: 3px;
+    transition: all 0.3s ease;
+}
+
+.play-triangle {
+    transition: opacity 0.3s ease;
+}
+
+.pause-bar {
+    transition: opacity 0.3s ease;
+}
+
+.play-button.playing .play-triangle {
+    opacity: 0;
+}
+
+.play-button.playing .pause-left,
+.play-button.playing .pause-right {
+    opacity: 1;
+}
+
+/* Анимация вращения текста */
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Когда музыка играет */
+.play-button.playing {
+    background-color: #8B7355;
+}
+
+.play-button.playing .play-icon {
+    width: 26px;
+    height: 26px;
+    margin-left: 0;
+}
+
+.music-playing .circle-text {
+    animation-duration: 18s;
+}
+
+/* Фото в hero - опускаем немного ниже */
+.hero-photo {
+    position: absolute;
+    width: 450px;
+    height: auto;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.date-photo-container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-bottom: 40px;
+    text-align: right;
+}
+
+.date-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+}
+
+/* Убирает синее выделение при нажатии на мобильных устройствах */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Для инпутов и текстовых областей оставляем возможность выделения текста */
+input,
+textarea,
+[contenteditable="true"] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Убирает outline при фокусе, но оставляет для accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* Для доступности добавляем фокус видимый для клавиатуры */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #8B7355;
+    outline-offset: 2px;
+}
+
+/* Убирает выделение для кнопок и ссылок */
+button,
+a,
+.map-button,
+.submit-button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* Для Safari на iOS */
+@supports (-webkit-touch-callout: none) {
+    button,
+    a,
+    .map-button,
+    .submit-button {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* ========== ЕДИНЫЙ БРЕЙКПОИНТ ТОЛЬКО 479px ========== */
+@media screen and (max-width: 479px) {
+
+    /* Hero секция */
+    .hero-content {
+        padding-top: 12svh;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .hero-photo {
+        width: 380px;
+        bottom: 0;
+        max-width: 85%;
+    }
+
+    /* Плеер */
+    .music-player-container {
+        margin: 5px 0 20px 0;
+    }
+
+    .circle-player {
+        width: 150px;
+        height: 150px;
+    }
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .circle-text {
+        font-size: 12px;
+    }
+
+    /* Секция локации */
+    .location-section {
+        padding: 40px 0 0 0;
+    }
+
+    .invitation-text {
+        text-align: center;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .invitation {
+        font-size: 1.4rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .date {
+        font-size: 3rem;
+    }
+
+    /* Календарь */
+    .simple-calendar {
+        margin: 0 auto 30px auto;
+        padding: 15px;
+    }
+
+    .calendar-day {
+        font-size: 1rem;
+        padding: 8px 2px;
+    }
+
+    .calendar-date {
+        font-size: 1.5rem;
+        padding: 12px 2px;
+        margin: 0 2px;
+    }
+
+    .calendar-date.wedding-date {
+        transform: scale(1.05);
+    }
+
+    /* Фото места */
+    .location-photo {
+        height: 300px;
+    }
+
+    /* Блок LOCATION */
+    .location-info-light {
+        padding: 40px 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .location-title {
+        font-size: 2.5rem;
+    }
+
+    .location-address {
+        font-size: 1.1rem;
+    }
+
+    /* Все заголовки секций */
+    .section-title,
+    .dresscode-title,
+    .wishes-title,
+    .rsvp-title {
+        font-size: 2.5rem;
+        text-align: center !important;
+        margin-bottom: 40px;
+    }
+
+    /* Все секции */
+    .program-section,
+    .dresscode-section,
+    .wishes-section,
+    .rsvp-section,
+    .countdown-section {
+        padding: 50px 15px;
+    }
+
+    /* Таймлайн */
+    .timeline-time,
+    .timeline-text {
+        font-size: 1.2rem;
+    }
+
+    .timeline-dash {
+        font-size: 1.5rem;
+    }
+
+    /* DRESS CODE */
+    .dresscode-text,
+    .wishes-text,
+    .rsvp-text {
+        font-size: 1.2rem;
+    }
+
+    .palette-container {
+        justify-content: center;
+    }
+
+    /* Таймер */
+    .countdown-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .countdown-timer {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        min-width: 70px;
+    }
+
+    .countdown-number {
+        font-size: 2.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.9rem;
+    }
+
+    .countdown-separator {
+        font-size: 2rem;
+        margin: 0 2px;
+    }
+
+    /* Программа (иконки) */
+    .program-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .program-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .program-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .program-title {
+        font-size: 18px;
+    }
+
+    .program-time {
+        font-size: 16px;
+    }
+
+    /* Футер */
+    .footer-section {
+        padding: 40px 15px;
+    }
+
+    .footer-text {
+        font-size: 1.1rem;
+    }
+
+    .footer-contact {
+        font-size: 1.2rem;
+    }
+}
+
+/* Для очень маленьких экранов (дополнительно) */
+@media screen and (max-width: 360px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .date {
+        font-size: 2.5rem;
+    }
+
+    .circle-player {
+        width: 130px;
+        height: 130px;
+    }
+
+    .hero-photo {
+        width: 320px;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+    }
+}
+
+.gender-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gender-item {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.gender-icon {
+    width: 200px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.gender-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: #5c151b;
+    letter-spacing: 0.05rem;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 479px) {
+    .gender-icon {
+        width: 160px;
+    }
+    .gender-label {
+        font-size: 1.2rem;
+    }
+    .gender-images {
+        gap: 25px;
+    }
+}
+
+/* ===== ИСПРАВЛЕНИЯ ДЛЯ ТАЙМЕРА ===== */
+
+/* Убираем фиксированную ширину и делаем таймер полностью адаптивным */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: auto;
+    padding: 0 5px;
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.countdown-separator {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+/* Для экранов до 600px */
+@media screen and (max-width: 600px) {
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.65rem;
+    }
+    
+    .countdown-separator {
+        font-size: 1.8rem;
+        margin: 0 1px;
+    }
+    
+    .countdown-item {
+        padding: 0 3px;
+    }
+}
+
+/* Для экранов до 480px */
+@media screen and (max-width: 480px) {
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.55rem;
+    }
+    
+    .countdown-separator {
+        font-size: 1.4rem;
+    }
+    
+    .countdown-item {
+        padding: 0 2px;
+    }
+}
+
+/* Для экранов до 400px - убираем разделители и переносим */
+@media screen and (max-width: 400px) {
+    .countdown-timer {
+        gap: 8px;
+    }
+    
+    .countdown-separator {
+        display: none;
+    }
+    
+    .countdown-number {
+        font-size: 1.8rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.6rem;
+    }
+    
+    .countdown-item {
+        min-width: 70px;
+    }
+}
+
+/* Для экранов до 340px */
+@media screen and (max-width: 340px) {
+    .countdown-item {
+        min-width: 60px;
+    }
+    
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+}
+
+.lifetime-promise {
+    background: #f0e9df;  /* новый фон */
+    padding: 5rem 1.5rem;
+    text-align: center;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.promise-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.promise-icon {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    letter-spacing: 1rem;
+    color: #b89a7a;
+}
+
+.promise-icon .heart {
+    font-size: 2rem;
+    color: #c7a17a;
+    margin: 0 0.3rem;
+}
+
+.promise-title {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: #4a3b2c;
+    border-top: 1px solid #d6cbbc;
+    border-bottom: 1px solid #d6cbbc;
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.promise-lead {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5e4b38;
+    font-family: inherit;
+    margin-bottom: 2rem;
+}
+
+.promise-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #b48c5c;
+    border-left: 3px solid #dac29c;
+    margin: 2rem auto;
+    padding: 1rem 1.5rem;
+    max-width: 600px;
+    background: #f7f0e4;  /* чуть светлее основного фона для объёма */
+    font-family: inherit;
+}
+
+.promise-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a3b2c;
+    margin-top: 1.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 700px) {
+    .promise-title { font-size: 1.5rem; letter-spacing: 2px; }
+    .promise-quote { font-size: 1.2rem; }
+    .promise-icon { font-size: 1.6rem; letter-spacing: 0.5rem; }
+    .promise-lead br, .promise-text br { display: none; }
+}
+
+
+/* Стили для фото в футере */
+.footer-photo-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .footer-photo {
+        max-width: 280px;
+    }
+}
+
+/* Цветовая палитра кружочки */
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Адаптация для мобильных */
+@media screen and (max-width: 479px) {
+    .color-circle {
+        width: 40px;
+        height: 40px;
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .color-circle {
+        width: 35px;
+        height: 35px;
+        gap: 10px;
+    }
+}
+
+
+/* ===== Секция VK CHAT ===== */
+.vk-chat-section {
+    padding: 80px 20px;
+    background-color: #f0e9df !important;
+    color: #5c151b;
+    text-align: center;
+}
+
+.vk-chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.vk-chat-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #5c151b;
+    margin-bottom: 20px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.vk-chat-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #5c151b;
+    margin-bottom: 35px;
+}
+
+/* Кнопка VK - в стиле сайта */
+.vk-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #5c151b;
+    color: #f0e9df;
+    padding: 16px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    border: 2px solid #5c151b;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(92, 21, 27, 0.3);
+}
+
+.vk-button:hover {
+    background-color: transparent;
+    color: #5c151b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(92, 21, 27, 0.2);
+}
+
+.vk-button:active {
+    transform: scale(0.97);
+}
+
+.vk-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+/* Адаптив для мобильных */
+@media screen and (max-width: 479px) {
+    .vk-chat-section {
+        padding: 50px 15px;
+    }
+    
+    .vk-chat-title {
+        font-size: 2rem;
+    }
+    
+    .vk-chat-text {
+        font-size: 1.1rem;
+    }
+    
+    .vk-button {
+        font-size: 0.95rem;
+        padding: 14px 30px;
+        gap: 10px;
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .vk-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
