@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Таймер отсчета до свадьбы
 function updateCountdown() {
-    const weddingDate = new Date('2026-09-04T17:00:00');
+    const weddingDate = new Date('2026-11-11T15:30:00');
     const now = new Date();
     const diff = weddingDate - now;
     
